@@ -18,7 +18,7 @@ def index():
     return render_template(template, object_list=object_list)
 
 @app.route('/<category>/')
-def detail_category(category):
+def detail(category):
     template = 'index.html'
     object_list = get_csv()
     filtered_list = [x for x in object_list if x['Category'] == category]
